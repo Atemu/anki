@@ -126,7 +126,6 @@ build-ts:
 .PHONY: build-rspy
 build-rspy: buildhash
 	@set -eu -o pipefail ${SHELLFLAGS}; \
-	. "${ACTIVATE_SCRIPT}"; \
 	$(SUBMAKE) -C rspy build BUILDFLAGS="$(BUILDFLAGS)"
 
 .PHONY: build-pylib
