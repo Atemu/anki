@@ -115,7 +115,7 @@ qt/po/repo:
 	$(MAKE) pull-i18n
 
 .PHONY: build
-build: clean-dist build-ts build-rspy build-pylib build-qt add-buildhash
+build: build-ts build-rspy build-pylib build-qt add-buildhash
 	@echo
 	@echo "Build complete."
 
