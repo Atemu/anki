@@ -124,7 +124,7 @@ build-ts:
 	$(SUBMAKE) -C ts build
 
 .PHONY: build-rspy
-build-rspy: pyenv buildhash
+build-rspy: buildhash
 	@set -eu -o pipefail ${SHELLFLAGS}; \
 	. "${ACTIVATE_SCRIPT}"; \
 	$(SUBMAKE) -C rspy build BUILDFLAGS="$(BUILDFLAGS)"
