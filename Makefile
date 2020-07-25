@@ -1,4 +1,4 @@
-SHELL := /bin/bash
+SHELL := bash
 
 ifndef SHELLFLAGS
 	SHELLFLAGS :=
@@ -7,7 +7,7 @@ endif
 .SHELLFLAGS := -eu -o pipefail ${SHELLFLAGS} -c
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
-FIND := $(if $(wildcard /bin/find),/bin/find,/usr/bin/find)
+FIND := $(if $(wildcard find),find,find)
 
 ifndef OS
 	OS := unknown
